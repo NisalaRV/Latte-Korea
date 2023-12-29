@@ -12,7 +12,7 @@ export const hero1 = [
         cover: "../images/c3.png",
     },
     {
-        id: 3,
-        cover: "../images/c4.png",
+        id: 4,
+        cover: "../images/c6.png",
     },
 ]

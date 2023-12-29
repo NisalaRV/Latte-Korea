@@ -1,6 +1,8 @@
 import React, {Component} from "react";
-import {Navbar} from "../Navbar/Navbar";
+import {Navbar } from "../Navbar/Navbar";
 import {MainContent} from "../MainContent/MainContent";
+
+
 
 export class DefaultLayout extends Component {
     render() {

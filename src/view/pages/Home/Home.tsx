@@ -54,10 +54,10 @@ export const Home: React.FC = () => {
                                 <img
                                     src={item.cover}
                                     alt={`cover-${index}`}
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-auto object-cover"
                                 />
-                                <div className="text absolute top-0 left-0 text-white p-5">
-                                    {/* Your additional content here */}
+                                <div className="text absolute top-1 left-0 text-white p-5 text-2xl">
+                                    <h1>Welcome Latte Koriea</h1>
                                 </div>
                             </div>
                         ))}

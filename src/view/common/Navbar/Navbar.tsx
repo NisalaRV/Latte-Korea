@@ -4,12 +4,13 @@ import {Link} from "react-router-dom";
 export class Navbar extends Component {
     render() {
         return (
-            <div className="p-2 flex justify-between fixed top-0 left-0 z-50 w-screen h-[8vh] md:shadow-md shadow-sm bg-white">
+            <div
+                className="p-2 flex justify-between fixed top-0 left-0 z-50 w-screen h-[8vh] md:shadow-md shadow-sm bg-white">
 
                 <Link to="/">
                     <div className="flex">
                         <h1 className="text-1xl text-secondary">
-                          LATTE KOREA</h1>
+                            LATTE KOREA</h1>
 
                     </div>
                 </Link>
@@ -26,9 +27,11 @@ export class Navbar extends Component {
                     </li>
                 </ul>
 
-                <button className="text-[8px] text-[#e6f0e6]
+
+
+                <button className="text-[16px] text-[#e6f0e6]
                                    bg-green-400 pl-3 pr-3
-                                   hover:text-tertiary">
+                                   hover:text-tertiary rounded-[7px] mx-3 px-6 py-1.5">
                     <Link to="/login">Sign In</Link>
                 </button>
             </div>
