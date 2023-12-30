@@ -5,13 +5,13 @@ export class Navbar extends Component {
     render() {
         return (
             <div
-                className="p-2 flex justify-between fixed top-0 left-0 z-50 w-screen h-[8vh] md:shadow-md shadow-sm ">
+                className="p-2 flex bg-[#00171a] justify-between fixed top-0 left-0 z-50 w-screen h-[10vh] md:shadow-md shadow-sm ">
 
                 <Link to="/">
                     <div className="flex">
                         <img className="h-10 w-10  pt-1" src={logo}
                              alt=""/>
-                        <h1 className="text-1xl mt-1 text-secondry p-2">
+                        <h1 className="text-1xl mt-1 text-white p-2">
                             LATTE KOREA</h1>
 
 
@@ -19,16 +19,16 @@ export class Navbar extends Component {
                 </Link>
 
                 <ul className="list-none flex mt-3">
-                    <li className="mr-2 text-[15px] text-secondry hover:text-green-400">
+                    <li className="mr-2 text-[15px] text-white hover:text-green-400">
                         <Link to="/">Home</Link>
                     </li>
-                    <li className="mr-2 text-[15px] text-secondry hover:text-green-400">
+                    <li className="mr-2 text-[15px] text-white hover:text-green-400">
                         <Link to="/about">About</Link>
                     </li>
-                    <li className="mr-2 text-[15px] text-secondry hover:text-green-400">
+                    <li className="mr-2 text-[15px] text-white hover:text-green-400">
                         <Link to="/menu">Menu</Link>
                     </li>
-                    <li className="mr-2 text-[15px] text-secondry hover:text-green-400">
+                    <li className="mr-2 text-[15px] text-white hover:text-green-400">
                         <Link to="/contact">Contact</Link>
                     </li>
                 </ul>

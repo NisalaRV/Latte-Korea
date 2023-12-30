@@ -46,11 +46,11 @@ export const Home: React.FC = () => {
 
     return (
         <section className="hero">
-            <div className="">
+
                 <div className="w-full h-full">
                     <Slider {...settings}>
                         {hero1.map((item, index) => (
-                            <div key={index} className="box relative h-[92vh] sm:mt-16 w-full">
+                            <div key={index} className="box relative h-[100vh] sm:mt-16 w-full">
                                 <img
                                     src={item.cover}
                                     alt={`cover-${index}`}
@@ -71,7 +71,7 @@ export const Home: React.FC = () => {
                         ))}
                     </Slider>
                 </div>
-            </div>
+
         </section>
     );
 };
