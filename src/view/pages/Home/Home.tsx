@@ -46,18 +46,26 @@ export const Home: React.FC = () => {
 
     return (
         <section className="hero">
-            <div className="w-full h-auto md:h-[92vh] md:flex md:justify-between ">
-                <div className="w-full h-full ">
+            <div className="">
+                <div className="w-full h-full">
                     <Slider {...settings}>
                         {hero1.map((item, index) => (
                             <div key={index} className="box relative h-[92vh] sm:mt-16 w-full">
                                 <img
                                     src={item.cover}
                                     alt={`cover-${index}`}
-                                    className="w-full h-auto object-cover"
+                                    className="w-full h-[95vh] object-cover"
                                 />
-                                <div className="text absolute top-1 left-0 text-white p-5 text-2xl">
-                                    <h1>Welcome Latte Koriea</h1>
+                                <div className="text absolute top-20 text-white p-5 text-5xl ">
+                                    <h1 className="ml-[49vw] m-20  font-serif">Welcome Latte Koriea</h1>
+                                    <h3 className="ml-[750px] font-serif text-[30px]">FRESH & TASTY MEALS</h3>
+                                    <p className="text-[22px] ml-[750px] font-thin mt-[20px]">Gathering Place For The Tastiest Foods, Coffee & Sweet, Boba Tea, Live Music.</p>
+                                    <button className="text-[16px] text-[#e6f0e6] pr-6 border-[1px] ml-[750px]
+                                   hover:text-tertiary rounded-[7px] mx-4 px-7 py-5 mt-[40px]">Check Menu</button>
+
+                                    <button className="text-[16px] text-[#e6f0e6]
+                              pr-6 border-[1px]
+                                   hover:text-tertiary rounded-[7px] mx-4 px-7 py-5">Book Table</button>
                                 </div>
                             </div>
                         ))}

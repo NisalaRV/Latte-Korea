@@ -1,7 +1,7 @@
 export const hero1 = [
     {
         id: 1,
-        cover: "../images/l1.jpg",
+        cover: "../images/latte.jpg",
     },
     {
         id: 2,

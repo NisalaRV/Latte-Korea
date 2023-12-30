@@ -1,32 +1,37 @@
 import {Component} from "react";
 import {Link} from "react-router-dom";
-
+import logo from '../../../assets/logolatte.jpg'
 export class Navbar extends Component {
     render() {
         return (
             <div
-                className="p-2 flex justify-between fixed top-0 left-0 z-50 w-screen h-[8vh] md:shadow-md shadow-sm bg-white">
+                className="p-2 flex justify-between fixed top-0 left-0 z-50 w-screen h-[8vh] md:shadow-md shadow-sm ">
 
                 <Link to="/">
                     <div className="flex">
-                        <h1 className="text-1xl text-secondary">
+                        <img className="h-10 w-10  pt-1" src={logo}
+                             alt=""/>
+                        <h1 className="text-1xl mt-1 text-secondry p-2">
                             LATTE KOREA</h1>
+
 
                     </div>
                 </Link>
 
-                <ul className="list-none flex mt-1">
-                    <li className="mr-2 text-[15px] text-secondary hover:text-green-400">
+                <ul className="list-none flex mt-3">
+                    <li className="mr-2 text-[15px] text-secondry hover:text-green-400">
                         <Link to="/">Home</Link>
                     </li>
-                    <li className="mr-2 text-[15px] text-secondary hover:text-green-400">
-                        <Link to="/contact">About</Link>
+                    <li className="mr-2 text-[15px] text-secondry hover:text-green-400">
+                        <Link to="/about">About</Link>
                     </li>
-                    <li className="mr-2 text-[15px] text-secondary hover:text-green-400">
-                        <Link to="/about">Contact</Link>
+                    <li className="mr-2 text-[15px] text-secondry hover:text-green-400">
+                        <Link to="/menu">Menu</Link>
+                    </li>
+                    <li className="mr-2 text-[15px] text-secondry hover:text-green-400">
+                        <Link to="/contact">Contact</Link>
                     </li>
                 </ul>
-
 
 
                 <button className="text-[16px] text-[#e6f0e6]
