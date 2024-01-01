@@ -3,6 +3,7 @@ import {Route, Routes} from "react-router-dom";
 import {Home} from "../../pages/Home/Home";
 import {About} from "../../pages/About/About";
 import {Menu} from "../../pages/Menu/Menu";
+import {Contact} from "../../pages/Contact/Contact";
 
 export class MainContent extends Component {
     render() {
@@ -12,6 +13,7 @@ export class MainContent extends Component {
                     <Route path="/" Component={Home}></Route>
                     <Route path="/about" Component={About}></Route>
                     <Route path="/menu" Component={Menu}></Route>
+                    <Route path="/contact" Component={Contact}></Route>
                 </Routes>
             </div>
         );
