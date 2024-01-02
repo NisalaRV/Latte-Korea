@@ -18,7 +18,7 @@ export class Navbar extends Component {
                     </div>
                 </Link>
 
-                <ul className="list-none flex mt-3">
+                <ul className="list-none flex mt-3 gap-2 ">
                     <li className="mr-2 text-[15px] text-white hover:text-green-400">
                         <Link to="/">Home</Link>
                     </li>
