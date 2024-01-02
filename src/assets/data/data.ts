@@ -74,4 +74,18 @@ export const menu = [
         description:'CAPPUCCINO',
         price:500,
     },
+    {
+        id: 8,
+        img: "../images/menu/m8.png",
+        title:'CAPPUCCINO',
+        description:'CAPPUCCINO',
+        price:500,
+    },
+    {
+        id: 8,
+        img: "../images/menu/m8.png",
+        title:'CAPPUCCINO',
+        description:'CAPPUCCINO',
+        price:500,
+    },
 ]

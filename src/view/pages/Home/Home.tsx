@@ -50,11 +50,11 @@ export const Home: React.FC = () => {
                 <div className="w-full h-full">
                     <Slider {...settings}>
                         {hero1.map((item, index) => (
-                            <div key={index} className="box relative h-[100vh] sm:mt-16 w-full">
+                            <div key={index} className="box relative h-[97vh] sm:mt-16 w-full">
                                 <img
                                     src={item.cover}
                                     alt={`cover-${index}`}
-                                    className="w-full h-[95vh] object-cover"
+                                    className="w-full h-full object-cover"
                                 />
                                 <div className="text absolute top-20 text-white p-5 text-5xl ">
                                     <h1 className="ml-[49vw] m-20  font-serif">Welcome Latte Koriea</h1>

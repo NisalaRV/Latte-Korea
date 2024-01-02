@@ -29,11 +29,15 @@ export class Navbar extends Component {
                         <Link to="/menu">Menu</Link>
                     </li>
                     <li className="mr-2 text-[15px] text-white hover:text-green-400">
+                        <Link to="/booking">Booking</Link>
+                    </li>
+                    <li className="mr-2 text-[15px] text-white hover:text-green-400">
                         <Link to="/contact">Contact</Link>
                     </li>
                     <li className="mr-2 text-[15px] text-white hover:text-green-400">
-                        <Link to="/booking">Booking</Link>
+                        <Link to="/register">Register</Link>
                     </li>
+
                 </ul>
 
 

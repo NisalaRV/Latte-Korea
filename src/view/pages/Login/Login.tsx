@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import logolatte from '../../../assets/logolatte.jpg'
+import RegisterForm from "../Register/RegisterForm";
 // import g1 from '../../../assets/g1.png'
 
 class Login extends Component {
@@ -42,8 +43,7 @@ class Login extends Component {
                             <span className="font-bold text-md">Forgot password</span>
                         </div>
                         <button
-                            className="w-full bg-black text-white p-2 rounded-lg mb-6 hover:bg-white hover:text-black hover:border hover:border-gray-300"
-                        >
+                            className="w-full bg-black text-white p-2 rounded-lg mb-6 hover:bg-white hover:text-black hover:border hover:border-gray-300">
                             Sign in
                         </button>
                         {/*<button*/}

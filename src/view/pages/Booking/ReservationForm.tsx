@@ -48,7 +48,7 @@ class ReservationForm extends React.Component<{}, ReservationFormState> {
 
     render() {
         return (
-            <section className="relative w-screen h-screen flex justify-center items-center">
+            <section className="relative w-full h-screen flex justify-center items-center">
                 <img src={booking} className="absolute inset-0 w-full h-full object-cover" alt="Booking Background" />
                 <div className="absolute flex flex-col justify-center items-center p-6 bg-black bg-opacity-50 text-white">
                     <h5 className="font-bold text-4xl mb-3">Reservation</h5>
