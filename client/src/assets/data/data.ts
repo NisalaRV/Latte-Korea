@@ -88,4 +88,5 @@ export const menu = [
         description:'CAPPUCCINO',
         price:500,
     },
+
 ]
