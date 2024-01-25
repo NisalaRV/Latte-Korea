@@ -1,18 +1,19 @@
 
 const mongoose=require('mongoose');
-const {Reservations} =mongoose;
+const {Schema} =mongoose;
 
-const reservation= new Reservations({
-    name:{
+const reservation=new Schema({
+
+    fullname:{
        type:String,
        required:true
     },
     date:{
-        type:Date,
+        type:String,
         required:true
     },
     phone:{
-        type:Number,
+        type:String,
         required:true
     },
     email:{
@@ -20,7 +21,7 @@ const reservation= new Reservations({
         required:true
     },
     time:{
-        type:Number,
+        type:String,
         required:true
     },
     numOfPeople:{
@@ -29,5 +30,5 @@ const reservation= new Reservations({
     }
 });
 
-const Reservation=mongoose.models("Reservation",reservation);
+const Reservation =mongoose.model("Reservation",reservation);
 module.exports=Reservation;

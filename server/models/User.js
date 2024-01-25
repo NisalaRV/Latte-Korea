@@ -4,7 +4,7 @@ const  {Schema} =mongoose;
 
 const userSchema = new Schema({
 
-    fullName:{
+    fullname:{
         type:String,
         required:true
     },
@@ -17,21 +17,18 @@ const userSchema = new Schema({
         required:true
     },
     phone:{
-        type:Number,
+        type:String,
         required:true
     },
     nic:{
-        type:Number,
+        type:String,
         required:true
     },
     password:{
         type:String,
         required:true
-    },
-   conformpassword:{
-        type:String,
-        required:true
     }
+
 });
-const  User=mongoose.models("User",userSchema);
+const  User=mongoose.model("User",userSchema);
 module.exports=User;

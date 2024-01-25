@@ -4,7 +4,7 @@ import booking from "../../../assets/images/booking.jpg";
 interface ReservationFormData {
     name: string;
     email: string;
-    phone: string;
+    numOfPeople: string;
     date: string;
     time: string;
     phoneNumber: string;
@@ -22,7 +22,7 @@ class ReservationForm extends React.Component<{}, ReservationFormState> {
             formData: {
                 name: '',
                 email: '',
-                phone: '',
+                numOfPeople: '',
                 date: '',
                 time: '',
                 phoneNumber: '',
@@ -146,7 +146,7 @@ class ReservationForm extends React.Component<{}, ReservationFormState> {
                                         className="w-full p-2 text-black border rounded"
                                         type="text"
                                         name="phone"
-                                        value={this.state.formData.phone}
+                                        value={this.state.formData.numOfPeople}
                                         onChange={this.handleChange}
                                     />
                                 </label>
