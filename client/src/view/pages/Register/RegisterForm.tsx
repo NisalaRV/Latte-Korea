@@ -36,9 +36,9 @@ class RegisterForm extends Component<{}, RegisterFormData> {
     }
 
     render() {
-        let handleChange;
+        // let handleChange;
         return (
-            <section
+            <section id="/register"
                 className=" w-full h-screen mt-12 bg-cover bg-center"
                 style={{backgroundImage: `url(${menlistu})`}}
             >

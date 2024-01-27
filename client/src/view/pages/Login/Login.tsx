@@ -1,12 +1,36 @@
 
-import React, { Component } from 'react';
+import React, {Component, useState} from 'react';
 import logolatte from '../../../assets/logolatte.jpg'
 import RegisterForm from "../Register/RegisterForm";
 // import g1 from '../../../assets/g1.png'
+import { NavLink, useNavigate } from "react-router-dom";
+import axios from "axios";
 
-class Login extends Component {
-    render() {
-        return (
+const Login =()=>  {
+
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+    const navigation=useNavigate();
+
+    const checkData = () => {
+        axios
+            .post("http://localhost:8000/user/", { username, password })
+            .then((result) => {
+                if (result.data === "User login success") {
+                    navigation("/booking");
+                } else if (result.data === "Admin login success") {
+                    navigation("/");
+                } else {
+                    alert("Invalid username or password");
+                }
+            })
+            .catch((err) => {
+                alert(err.message || "An error occurred");
+            });
+    };
+
+
+    return (
             <div className="flex items-center justify-center min-h-screen bg-gray-100">
                 <div
                     className="relative flex flex-col m-6 space-y-8 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0"
@@ -22,8 +46,11 @@ class Login extends Component {
                             <input
                                 type="text"
                                 className="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500"
-                                name="email"
-                                id="email"
+                                name="name"
+                                id="name"
+                                onChange={(e) => {
+                                    setUsername(e.target.value);
+                                }}
                             />
                         </div>
                         <div className="py-4">
@@ -33,6 +60,9 @@ class Login extends Component {
                                 name="pass"
                                 id="pass"
                                 className="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500"
+                                onChange={(e) => {
+                                    setPassword(e.target.value);
+                                }}
                             />
                         </div>
                         <div className="flex justify-between w-full py-4">
@@ -43,8 +73,10 @@ class Login extends Component {
                             <span className="font-bold text-md">Forgot password</span>
                         </div>
                         <button
+                            onClick={checkData}
                             className="w-full bg-black text-white p-2 rounded-lg mb-6 hover:bg-white hover:text-black hover:border hover:border-gray-300">
                             Sign in
+
                         </button>
                         {/*<button*/}
                         {/*    className="w-full border border-gray-300 text-md p-2 rounded-lg mb-6 hover:bg-black hover:text-white"*/}
@@ -54,7 +86,11 @@ class Login extends Component {
                         {/*</button>*/}
                         <div className="text-center text-gray-400">
                             Dont'have an account?
-                            <span className="font-bold text-black">Sign up for free</span>
+                            <NavLink to={'/register'}>
+                                <span className="font-bold text-black"> Sign up for free</span>
+                            </NavLink>
+
+
                         </div>
                     </div>
 
@@ -70,7 +106,7 @@ class Login extends Component {
                 </div>
             </div>
         );
-    }
+
 }
 
 export default Login;
